@@ -1,0 +1,19 @@
+  Scanner sc = new Scanner(System.in);
+        Random generator = new Random();
+        int hiddenNumber = generator.nextInt(100);
+        int attemptcount = 0;
+        while (true){
+            System.out.println("enter a number: ");
+            int number = sc.nextInt();
+            attemptcount++;
+            if (number<hiddenNumber){
+                System.out.println("try a bigger number");
+            } else if (number>hiddenNumber) {
+                System.out.println("try a smaller number");
+
+
+            }else {
+                System.out.println("congrats!! You  gussed the number in  "+ attemptcount + "Attemps");
+                break;
+            }
+        }
